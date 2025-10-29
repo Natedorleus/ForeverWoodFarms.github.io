@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Wood Farms | Sustainable Farming</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/agriculture/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .farm-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <i data-feather="feather" class="mr-2"></i>
+                Forever Wood Farms
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#products" class="hover:text-yellow-300 transition">Products</a>
+                <a href="#services" class="hover:text-yellow-300 transition">Services</a>
+                <a href="#about" class="hover:text-yellow-300 transition">About</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-green-700 w-full px-6 py-2" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#products" class="hover:text-yellow-300 transition">Products</a>
+                <a href="#services" class="hover:text-yellow-300 transition">Services</a>
+                <a href="#about" class="hover:text-yellow-300 transition">About</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div id="vanta-globe" class="absolute inset-0"></div>
+        <div class="container mx-auto px-6 z-10 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Forever Wood Farms</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Sustainable farming for healthier communities</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#products" class="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                    Our Products
+                </a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-green-800 text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300 transform hover:scale-105">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Our Farm Products</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Naturally grown and ethically produced farm products for your family
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Eggs Card -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('http://static.photos/food/640x360/1');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="farm-icon rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="egg" class="text-green-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-800">Farm Fresh Eggs</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Free-range eggs from our happy chickens, turkeys, and ducks. Rich in nutrients and flavor.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-600 font-bold">$5.99 / dozen</span>
+                            <button class="text-green-700 hover:text-green-900 font-medium">
+                                Learn More <i data-feather="arrow-right" class="ml-1 inline"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honey Card -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('http://static.photos/nature/640x360/2');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="farm-icon rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="droplet" class="text-green-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-800">Pure Honey</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Raw, unfiltered honey from our cultivated bees. Perfect for sweetening your day naturally.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-600 font-bold">$12.99 / jar</span>
+                            <button class="text-green-700 hover:text-green-900 font-medium">
+                                Learn More <i data-feather="arrow-right" class="ml-1 inline"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vegetables Card -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('http://static.photos/agriculture/640x360/3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="farm-icon rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="leaf" class="text-green-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-800">Organic Vegetables</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Seasonal vegetables and herbs grown without synthetic pesticides or fertilizers.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-600 font-bold">Prices Vary</span>
+                            <button class="text-green-700 hover:text-green-900 font-medium">
+                                Learn More <i data-feather="arrow-right" class="ml-1 inline"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Farm Services</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Beyond products, we offer services to connect you with sustainable farming
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-green-700 mb-4">
+                        <i data-feather="calendar" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Farm Tours</h3>
+                    <p class="text-gray-600">
+                        Experience sustainable farming firsthand with guided tours of our facilities and fields.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-green-700 mb-4">
+                        <i data-feather="book" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Workshops</h3>
+                    <p class="text-gray-600">
+                        Learn beekeeping, organic gardening, and animal husbandry from our experts.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-green-700 mb-4">
+                        <i data-feather="shopping-bag" class="w-12 h-12 mx-auto"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-800 mb-3">CSA Program</h3>
+                    <p class="text-gray-600">
+                        Join our Community Supported Agriculture program for regular deliveries of fresh produce.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10" data-aos="fade-right">
+                    <img src="http://static.photos/people/640x360/4" alt="Michael Harwood" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-4xl font-bold text-green-800 mb-6">About Forever Wood Farms</h2>
+                    <p class="text-gray-600 mb-4">
+                        Founded by Michael Harwood, Forever Wood Farms is a family-owned sustainable farm dedicated to ethical farming practices and providing our community with the freshest, most nutritious products.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        We believe in working with nature, not against it. Our animals are free-range, our bees are happy, and our vegetables are grown with organic methods that enrich the soil.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Sustainable Practices</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Locally Sourced</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="check-circle" class="text-green-600 mr-2"></i>
+                            <span class="text-gray-700">Chemical-Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
+                    Have questions about our products or services? Reach out to us!
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-green-800 mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="text-green-700 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Address</h4>
+                                    <p class="text-gray-600">123 Farm Lane, Ruraltown, ST 12345</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="text-green-700 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@foreverwoodfarms.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="text-green-700 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="clock" class="text-green-700 mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Hours</h4>
+                                    <p class="text-gray-600">Monday - Saturday: 8am - 6pm</p>
+                                    <p class="text-gray-600">Sunday: 10am - 4pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-green-700 hover:text-green-900">
+                                    <i data-feather="facebook"></i>
+                                </a>
+                                <a href="#" class="text-green-700 hover:text-green-900">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                                <a href="#" class="text-green-700 hover:text-green-900">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <i data-feather="feather" class="mr-2"></i>
+                        Forever Wood Farms
+                    </h3>
+                    <p class="max-w-xs text-green-100">
+                        Sustainable farming for healthier communities since 2010.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-green-100 hover:text-yellow-300 transition">Home</a></li>
+                            <li><a href="#products" class="text-green-100 hover:text-yellow-300 transition">Products</a></li>
+                            <li><a href="#services" class="text-green-100 hover:text-yellow-300 transition">Services</a></li>
+                            <li><a href="#about" class="text-green-100 hover:text-yellow-300 transition">About</a></li>
+                            <li><a href="#contact" class="text-green-100 hover:text-yellow-300 transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Products</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-green-100 hover:text-yellow-300 transition">Eggs</a></li>
+                            <li><a href="#" class="text-green-100 hover:text-yellow-300 transition">Honey</a></li>
+                            <li><a href="#" class="text-green-100 hover:text-yellow-300 transition">Vegetables</a></li>
+                            <li><a href="#" class="text-green-100 hover:text-yellow-300 transition">Herbs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-green-100 hover:text-yellow-300 transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-green-100 hover:text-yellow-300 transition">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-green-800 mt-12 pt-8 text-center text-green-100">
+                <p>&copy; 2023 Forever Wood Farms. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize animations and effects
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Vanta.js background effect
+        VANTA.GLOBE({
+            el: "#vanta-globe",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3a8b4f,
+            backgroundColor: 0x0,
+            size: 0.8
+        });
+
+        // Feather icons replacement
+        feather.replace();
+    </script>
+</body>
+</html>
